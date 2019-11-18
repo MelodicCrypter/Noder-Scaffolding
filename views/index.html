@@ -1,32 +1,31 @@
-<!doctype html>
+<!-- Main Header, placed in views/partials/header.html -->
+${header}
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
+<body class="text-center">
+<!-- temporary pre-made Bootstrap sample -->
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
 
-  <title>Simple Node Setup</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <link rel="stylesheet" href="">
-
-</head>
-
-<body>
-  <header>
-    <nav></nav>
+    </div>
   </header>
-  
-  <main>
-    <section></section>
-  </main>
-  
-  <footer>
-    <div></div>
-  </footer>
 
-  <!-- Scripts -->
-  <script src=""></script>
-  
-</body>
-</html>
+  <main role="main" class="inner cover">
+    <!-- import your images in the app-frontend.js file and append -->
+    <img id="testImg" src="" alt="">
+
+    <h1 class="cover-heading">NODE APP</h1>
+    <h6 class="cover-heading-sub">SIMPLE NODE SETUP (BASIC)</h6>
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>Scaffolding by [ <a href=${repoAuthorSite}>${repoAuthor}</a> ] <i class="fas fa-hand-rock"></i>  <i class="fas fa-rocket"></i></p>
+      <p>#handle <a href=${repoAuthorGitLink}>${handle}</a></p>
+    </div>
+  </footer>
+</div>
+
+<!-- Main Footer, placed in views/partials/footer.html -->
+<!-- body and html closing tags are inside here as well -->
+${footer}

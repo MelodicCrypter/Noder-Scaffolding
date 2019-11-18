@@ -1,13 +1,26 @@
 {
   "name": "simple-node-setup",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "src/server.js",
   "license": "MIT",
+  "scripts": {
+    "build:css": "node-sass --include-path scss public/scss/app.scss public/css/app.css",
+    "dev:start": "nodemon --exec babel-node src/server.js --ext js,graphql,html"
+  },
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-es6-template-engine": "^2.2.0",
     "helmet": "^3.21.2",
     "hpp": "^0.2.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "node-sass": "^4.13.0",
+    "nodemon": "^1.19.4"
   }
 }
