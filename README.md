@@ -17,11 +17,11 @@ my Robust Node Scaffolding git repo [here](https://github.com/MelodicCrypter/Rob
 
 <br>
 
-##### Development
+#### Development
 1. After editing the app.scss (*inside public/scss/app.scss*) file for your style (*Note: if you don't want to use scss, edit directly app.css inside public/css/app.css*). 
 If you continue using scss, then just run `yarn build:css` command to compile your sass file to a css file.
 
 2. To test locally just run `yarn dev:start`
 
-##### Views
+#### Views
 For the views, [ES6Renderer](https://www.npmjs.com/package/express-es6-template-engine) is used. A really great node package for rendering dynamic stuff to your frontend by just using Javascript's template string feature.
