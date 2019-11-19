@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build:css": "node-sass --include-path scss public/scss/app.scss public/css/app.css",
-    "dev:start": "nodemon --exec babel-node src/server.js --ext js,graphql,html"
+    "dev:start": "nodemon --exec babel-node src/server.js --ext js,html",
+    "start": "babel-node src/server.js"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
