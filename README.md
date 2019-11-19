@@ -24,4 +24,4 @@ If you continue using scss, then just run `yarn build:css` command to compile yo
 2. To test locally just run `yarn dev:start`
 
 ##### Views
-For the views, ES6Renderer is used. A really great node package for rendering dynamic stuff to your frontend by just using Javascript's template string feature.
+For the views, [ES6Renderer](https://www.npmjs.com/package/express-es6-template-engine) is used. A really great node package for rendering dynamic stuff to your frontend by just using Javascript's template string feature.
