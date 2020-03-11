@@ -4,6 +4,7 @@
 - HPP
 - CORS
 - HELMET
+- Compression
 - ES6Renderer
 - Babel
 - Node-Sass
@@ -18,7 +19,7 @@ my Robust Node Scaffolding git repo [here](https://github.com/MelodicCrypter/Rob
 <br>
 
 #### Development
-1. After editing the app.scss (*inside public/scss/app.scss*) file for your style (*Note: if you don't want to use scss, edit directly app.css inside public/css/app.css*). 
+1. After editing the app.scss (*inside public/scss/app.scss*) file for your style (*Note: if you don't want to use scss, edit directly app.css inside public/css/app.css*).
 If you continue using scss, then just run `yarn build:css` command to compile your sass file to a css file.
 
 2. To test locally just run `yarn dev:start`
