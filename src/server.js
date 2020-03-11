@@ -17,7 +17,7 @@ const publicPath = path.join(__dirname, '../public/');
 
 // View Template engine
 app.engine('html', es6Renderer);
-app.set('views', 'views');
+app.set('views', __dirname+'/views');
 app.set('view engine', 'html');
 
 // Middlewares
@@ -41,8 +41,8 @@ app.get('/', (req, res) => {
             handle: '@MelodicCrypter',
         },
         partials: {
-            header: path.resolve('views/partials/header.html'),
-            footer: path.resolve('views/partials/footer.html'),
+            header: path.resolve('src/views/partials/header.html'),
+            footer: path.resolve('src/views/partials/footer.html'),
         },
     });
 });
