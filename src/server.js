@@ -1,10 +1,14 @@
 // Library Modules
-const express = require('express');
-const path = require('path');
-const helmet = require('helmet');
-const cors = require('cors');
-const hpp = require('hpp');
-const es6Renderer = require('express-es6-template-engine');
+import express from 'express';
+import path from 'path';
+import helmet from 'helmet';
+import cors from 'cors';
+import hpp from 'hpp';
+import compression from 'compression';
+import es6Renderer from 'express-es6-template-engine';
+
+// Util
+import shouldCompress from "./util/shouldCompress";
 
 // Set up
 const app = express();
@@ -17,10 +21,12 @@ app.set('views', 'views');
 app.set('view engine', 'html');
 
 // Middlewares
+// Consider CSP and SRI for more security features
 app.use(cors({ origin: false }));
 app.use(helmet());
+app.use(compression({ filter: shouldCompress, threshold: 0 }));
 app.use(express.json({ limit: '300kb' }));
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(hpp());
 app.use(express.static(publicPath));
 
@@ -42,5 +48,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`App is listening on port ${port}`)
+    console.log(`🚀 App is listening on port ${port}`)
 });
